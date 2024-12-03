@@ -1,1 +1,1 @@
-BongoPiano.
+Welcome to Bongo Piano
