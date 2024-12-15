@@ -7,24 +7,37 @@ import java.util.*;
  */
 public class AbstractFactory {
 
+    string username;
+    string hashedpassword;
+    AbstractFactory theFact;
+
     /**
-     * Default constructor
+     * Default constructor which is private because singleton
      */
-    public AbstractFactory() {
+    private AbstractFactory() {
     }
 
     /**
      * 
      */
     public void createUserDAO() {
-        // TODO implement here
+
     }
 
     /**
      * 
      */
     public void getInstance() {
-        // TODO implement here
+        if (this.theFact == null){
+            this.theFact = AbstractFactory();
+        }
+        return this.theFact;
     }
 
+    public void setUsername(string username) {
+        this.username = username;
+    }
+    public void setHashedPassword(string pw){
+        this.hashedpassword = pw;
+    }
 }
